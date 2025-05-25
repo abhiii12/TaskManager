@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task Manager App
 
 A command-line task management application built with Swift.
@@ -92,3 +93,6 @@ This is a command-line application built with Swift. The main components are:
 ## License
 
 MIT License 
+=======
+# TaskManager
+>>>>>>> f44c69474b73668ef444b68a38986a59025b42c2
