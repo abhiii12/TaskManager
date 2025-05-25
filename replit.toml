@@ -1,0 +1,26 @@
+run = "swift run"
+entrypoint = "main.swift"
+
+[nix]
+channel = "stable-22_11"
+
+[env]
+PATH = "/home/runner/$REPL_SLUG/.config/swift/usr/bin:/home/runner/$REPL_SLUG/.config/swift/usr/local/bin:$PATH"
+SWIFT_HOME = "/home/runner/$REPL_SLUG/.config/swift"
+LD_LIBRARY_PATH = "/home/runner/$REPL_SLUG/.config/swift/usr/lib/swift/linux:$LD_LIBRARY_PATH"
+
+[packager]
+language = "swift"
+ignoredPackages = ["unit_tests"]
+
+[packager.features]
+packageSearch = true
+guessImports = true
+enabledForHosting = false
+
+[languages.swift]
+pattern = "**/*.swift"
+syntax = "swift"
+
+[languages.swift.languageServer]
+start = "sourcekit-lsp" 
